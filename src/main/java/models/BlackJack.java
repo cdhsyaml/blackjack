@@ -2,6 +2,7 @@ package models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Guest on 8/3/17.
@@ -9,11 +10,29 @@ import java.util.List;
 public class BlackJack {
 
     private List dealerCards;
+    private List deckCount;
 
-    public List<Object> SingleCard(){
-        List<Object> deck = new ArrayList<Object>();
-        String[] suits = {"Spades", "Clubs" , "Diamonds" ,"hearts" };
-        String[] values = {"Ace", "2", "3" ,"4" ,"5" ,"6", "7" ,"8","9" ,"Jack" , "Queen" ,"King"};
+
+
+    private String[] suits = {"Spades", "Clubs" , "Diamonds" ,"hearts" };
+
+
+    private String[] values = {"Ace", "2", "3" ,"4" ,"5" ,"6", "7" ,"8","9" ,"Jack" , "Queen" ,"King"};
+
+    List<String> deck = new ArrayList<String >();
+
+
+    public String[] getValues() {
+        return values;
+    }
+
+    public String[] getSuits() {
+        return suits;
+    }
+
+
+
+    public List<String> SingleCard(){
 
         for (String suit : suits){
             for (String value : values) {
@@ -39,6 +58,14 @@ public class BlackJack {
 
     public List getDealerCards() {
         return dealerCards;
+    }
+
+    public String randomCardSelection() throws Exception{
+        Random randomCard = new Random();
+        List<String> newDeck = SingleCard();
+       String drawCard = newDeck.get(randomCard.nextInt(newDeck.size()));
+        System.out.println(drawCard);
+       return drawCard;
     }
 
 
