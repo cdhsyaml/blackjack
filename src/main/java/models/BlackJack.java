@@ -65,7 +65,7 @@ public class BlackJack {
         List<String> newDeck = SingleCard();
        String drawCard = newDeck.get(randomCard.nextInt(newDeck.size()));
         System.out.println(drawCard);
-       return drawCard;
+       return "";
     }
 
 
