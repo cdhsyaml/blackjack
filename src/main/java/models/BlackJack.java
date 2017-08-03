@@ -8,6 +8,7 @@ import java.util.List;
  */
 public class BlackJack {
 
+    private List dealerCards;
 
     public List<Object> SingleCard(){
         List<Object> deck = new ArrayList<Object>();
@@ -22,7 +23,23 @@ public class BlackJack {
             }
         } return deck;
 
-
     }
+
+    public boolean playerHandCount (int dealerCards){
+       boolean dealer = false;
+        if (dealerCards == 21){
+            dealer = true;
+        }
+        else {
+            dealer = false;
+        }
+
+        return dealer;
+    }
+
+    public List getDealerCards() {
+        return dealerCards;
+    }
+
 
 }

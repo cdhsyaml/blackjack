@@ -17,12 +17,18 @@ public class BlackJackTest {
         assertEquals(true, blackJack instanceof BlackJack);
     }
 
+//    @Test
+//    public void newBlackJack_DeckOfCards(){
+//        BlackJack blackJack = new BlackJack();
+//
+//
+//
+//        assertEquals("Ace of Spades", blackJack.SingleCard());
+//    }
+
     @Test
-    public void newBlackJack_DeckOfCards(){
+    public void newBlackjack_dealerWinsFirstRound() {
         BlackJack blackJack = new BlackJack();
-
-        
-
-        assertEquals("Ace of Spades", blackJack.SingleCard());
+        assertEquals(true, blackJack.playerHandCount(11));
     }
 }
