@@ -21,6 +21,8 @@ public class BlackJackTest {
     public void newBlackJack_DeckOfCards(){
         BlackJack blackJack = new BlackJack();
 
+        
+
         assertEquals("Ace of Spades", blackJack.SingleCard());
     }
 }
