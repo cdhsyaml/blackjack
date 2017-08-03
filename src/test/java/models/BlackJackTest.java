@@ -29,6 +29,6 @@ public class BlackJackTest {
     @Test
     public void newBlackjack_dealerWinsFirstRound() {
         BlackJack blackJack = new BlackJack();
-        assertEquals(true, blackJack.playerHandCount(11));
+        assertEquals(true, blackJack.playerHandCount(21));
     }
 }
