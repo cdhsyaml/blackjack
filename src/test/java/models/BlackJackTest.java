@@ -37,4 +37,10 @@ public class BlackJackTest {
         BlackJack blackJack = new BlackJack();
         assertEquals("", blackJack.randomCardSelection());
     }
+
+    @Test
+    public void newBlackjack_drawSceondCard() throws Exception {
+        BlackJack blackJack = new BlackJack();
+        assertEquals(51, blackJack.randomCardSelection());
+    }
 }
