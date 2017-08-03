@@ -16,4 +16,11 @@ public class BlackJackTest {
         BlackJack blackJack = new BlackJack();
         assertEquals(true, blackJack instanceof BlackJack);
     }
+
+    @Test
+    public void newBlackJack_DeckOfCards(){
+        BlackJack blackJack = new BlackJack();
+
+        assertEquals("Ace of Spades", blackJack.SingleCard());
+    }
 }
